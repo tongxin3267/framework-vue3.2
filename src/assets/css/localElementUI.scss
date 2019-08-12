@@ -1,0 +1,23 @@
+/*
+* ElementUI 本地自定义样式文件，在本文件中定义个性化的ElementUI的样式内容，此内容将会在全局生效
+*/
+/* === el-pagination分页统一样式=== */
+.pagination-container{
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 36px;
+  .el-pagination{
+    .el-pagination__jump{
+      margin-left: 0
+    }
+  }
+}
+/* === el-dialog弹出框统一样式=== */
+.dialog-container{
+  text-align: center;
+  .el-dialog__header{}
+  .el-dialog__body{}
+  .el-dialog__footer{
+    text-align: center;
+  }
+}

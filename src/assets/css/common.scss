@@ -1,0 +1,36 @@
+/*
+ * style css
+ * 全局样式文件
+ */
+@import "reset.css"; /*引入重置样式*/
+@import "localElementUI"; /*引入elementUI自定义的样式*/
+
+/*  设置自定义文字图标 */
+@font-face {
+  font-family: "iconfont";
+  src: url('./../font/iconfont.eot');
+  /* IE9*/
+  src: url('./../font/iconfont.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('./../font/iconfont.woff') format('woff'), /* chrome, firefox */
+  url('./../font/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('./../font/iconfont.svg#iconfont') format('svg');
+  /* iOS 4.1- */
+}
+/*  设置自定义文字图标 */
+.iconFont {
+  font-family: "iconfont", serif !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*  内容轮廓 */
+.container-content { width: 1200px; margin: 0 auto; }
+
+/* 左右浮动与清除浮动*/
+.fl{float: left;}
+.fr{float: right;}
+.clearfix:after { clear: both; content: ""; display: block; }
+.clearfix { *zoom: 1; }

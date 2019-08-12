@@ -1,0 +1,6 @@
+# 浏览器版本检测配置
+> 1%
+last 1 version
+not ie <= 9
+maintained node versions
+not dead
