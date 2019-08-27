@@ -29,8 +29,7 @@ export function testApiService(data) {
   return request({
     method: "post",
     url: "/testApiService",
-    params: data,
-    mode: "VUE_APP_API_Test" // 这个可以根据需要配置
+    params: data
   });
 }
 

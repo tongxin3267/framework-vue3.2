@@ -8,6 +8,7 @@ import ElementUI from "element-ui";
 * axios.defaults.withCredentials = true;
 */
 // 创建单独的axios实例
+console.log('window.VUE_APP_Test_API',window.VUE_APP_Test_API);
 const service = axios.create({
   baseURL: process.env.VUE_APP_API_BASE_URL, // api的base_url
   timeout: 10000, // 请求超时(10s)

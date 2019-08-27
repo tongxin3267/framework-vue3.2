@@ -7,8 +7,13 @@
 </template>
 
 <script>
+  import {testApiService} from 'src/api/indexApi';
 export default {
-  name: "login"
+  name: "login",
+  created() {
+    console.log('window.VUE_APP_Test_API',window.VUE_APP_Test_API);
+    testApiService().then(()=>{});
+  }
 };
 </script>
 
