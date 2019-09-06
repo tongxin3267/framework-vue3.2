@@ -1,13 +1,13 @@
 import Vue from "../../../../node_modules/vue";
 import Router from "../../../../node_modules/vue-router";
 /* 路由不需要异步加载区域 */
-import Home from "src/views/index/Home";
+import Home from "src/views/front/Home";
 import NotFound from "src/components/404.vue";
 import NoJurisdiction from 'src/components/401.vue';
 /* 路由异步加载区域 */
 // 账号模块
-const account = ()=>import('src/views/index/account/account');
-const loginComponent = ()=>import('src/views/index/account/login');
+const account = ()=>import('src/views/front/account/account');
+const loginComponent = ()=>import('src/views/front/account/login');
 
 Vue.use(Router);
 

@@ -1,9 +1,9 @@
-import Vue from "../../../node_modules/vue";
+import Vue from "vue";
 import App from "../../App.vue";
 // 引入路由
-import router from "src/views/index/router/router";
+import router from "src/views/front/router/router";
 // 引入路由守卫
-import "src/views/index/router/router-interceptor";
+import "src/views/front/router/router-interceptor";
 // 引入vuex(共用)
 import store from "src/store/store";
 // include(共用)

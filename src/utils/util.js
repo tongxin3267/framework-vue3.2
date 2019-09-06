@@ -1,16 +1,18 @@
 /*
   全局工具方法
   每个编写的工具方法必须要写好说明，最好有例子
-  如：cookie 使用、和日期的格式转换
   通过import {} from 'util.js'有选择导入
+  当前拥有的方法有：
+  1.根据时间及格式获取时间的字符串（formatDate）
+  2.转化时间（transDate）
+  3.设置cookie（setCookie）
+  4.读取cookie（getCookie）
 */
-/**
- * @summary 根据时间及格式获取时间的字符串
+/* 1.根据时间及格式获取时间的字符串
  * @param {int} iDate 时间
  * @param {string} sFormat 格式，默认：yyyy-MM-dd HH:mm:ss
  * @return {string} 格式化后的日期字符串
- * @example
- *    formatDate(new Date(),'yyyy-MM-dd HH:mm:ss SSS');// 2017-6-6 11:11:11
+ * @example formatDate(new Date(),'yyyy-MM-dd HH:mm:ss SSS');// 2017-6-6 11:11:11
  */
 export const formatDate = (iDate, sFormat = "yyyy-MM-dd HH:mm:ss") => {
   if (!iDate) {
@@ -63,12 +65,10 @@ export const formatDate = (iDate, sFormat = "yyyy-MM-dd HH:mm:ss") => {
   return sFormat;
 };
 
-/**
- * 转化时间
+/* 2.转化时间
  * @param {String} str (yyyy-MM-dd HH:mm:ss SSS)
- * @returns {String} 转化后的时间
- * @example
- *    transDate("2019-1-10");// 2天前
+ * @return {String} 转化后的时间
+ * @example transDate("2019-1-10");// 2天前
  */
 export const transDate = str => {
   if (!str) return "";
@@ -94,8 +94,7 @@ export const transDate = str => {
   }
 };
 
-/**
- * @summary 设置cookie
+/* 3.设置cookie
  * @param {string} name cookie名称
  * @param {string} value cookie值
  * @param {int} expires 保存时间(单位:小时)
@@ -122,11 +121,9 @@ export const setCookie = (name, value, expires, path, domain, secure) => {
   document.cookie = str;
 };
 
-/**
- * @summary 读取cookie
+/* 4.读取cookie
  * @param {string} name cookie名称
- * @retrun {string} value cookie值
- * @example
+ * @return {string} value cookie值
  */
 export const getCookie = name => {
   let start = document.cookie.indexOf(name + "=");

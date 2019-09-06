@@ -1,7 +1,7 @@
 /*
 *  路由拦截配置文件
 * */
-import router from 'src/views/index/router/router';
+import router from 'src/views/front/router/router';
 router.beforeEach((to, from, next) => {
   var custToken = sessionStorage.getItem('custToken');
   console.log(custToken);
